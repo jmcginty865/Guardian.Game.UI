@@ -1,4 +1,4 @@
-<h2>Contact Reactive Form</h2>
+<h2>Your score</h2>
 
 <form (ngSubmit)="submitForm()" [formGroup]="contactForm" novalidate>
   <div class="form-content">
@@ -6,13 +6,10 @@
       Name:
       <input type="text" formControlName="name" class="sd-form-control" placeholder="Enter your name.">
     </label>
+    <br>
     <label>
-      Email:
-      <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your email.">
-    </label>
-    <label>
-      Content:
-      <textarea formControlName="content" class="sd-form-control" placeholder="Content here."></textarea>
+      URL:
+      <input type="email" formControlName="email" class="sd-form-control" placeholder="Enter your Url.">
     </label>
     <div class="form-submit">
       <button type="submit">Submit</button>
@@ -20,17 +17,19 @@
   </div>
 </form>
 
-<div class="form-value">
-  Form value:
-  <pre>
-    {{contactForm.value | json}}
-  </pre>
-  <p>
-    Status: {{contactForm.status}}
-  </p>
-  <p>
-    Valid: {{contactForm.valid}}
-  </p>
-  <p>Submit then open console to see full form.</p>
-</div>
+
+
+<!--<div class="form-value">-->
+  <!--Score Results-->
+  <!--<pre>-->
+    <!--{{contactForm.value | json}}-->
+  <!--</pre>-->
+  <!--<p>-->
+    <!--Status: {{contactForm.status}}-->
+  <!--</p>-->
+  <!--<p>-->
+    <!--Valid: {{contactForm.valid}}-->
+  <!--</p>-->
+  <!--<p>Submit then open console to see full form.</p>-->
+<!--</div>-->
 

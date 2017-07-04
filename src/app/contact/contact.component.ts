@@ -7,6 +7,7 @@ import CustomValidators from '../forms/CustomValidators';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact-component.css']
 })
+
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   constructor(private formBuilder: FormBuilder) {}
@@ -15,8 +16,7 @@ export class ContactComponent implements OnInit {
     this.contactForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, CustomValidators.validateEmail]],
-      content: ['', [Validators.required, Validators.minLength(10)]]
-    });
+      });
   }
   submitForm(): void {
     console.log(this.contactForm);
